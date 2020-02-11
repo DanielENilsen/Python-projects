@@ -30,6 +30,7 @@ def main():
 		if obj.working == True and obj.workhours_close < obj.buy_time:custumer_work_array.append(obj)
 		elif obj.working == False:custumer_dont_array.append(obj)
 		if obj.car == True:car_array.append(obj)
+		print("Hello world")
 
 	
 
