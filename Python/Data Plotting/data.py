@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt 
 import random 
 from random import randint 
-from statistics import mode
+
 
 
 """Plotting a simple data for a store that wil find out when average custumer wil come to the store"""
@@ -31,26 +31,8 @@ def main():
 		elif obj.working == False:custumer_dont_array.append(obj)
 		if obj.car == True:car_array.append(obj)
 
-	zim = mode(custumer_work_array)
-	print(zim)
+	
 
-
-
-
-
-"""
-	data = [i.buy_time for i in custumer_work_array]
-	data2 = [i.buy_time for i in custumer_dont_array]
-	rageA = [i for i in range(len(data))]
-
-
-
-
-	plt.scatter(data,rageA ,color = "r")	
-	plt.show()
-
-
-"""
 main()
 
 
