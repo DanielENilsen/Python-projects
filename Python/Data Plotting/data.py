@@ -2,6 +2,7 @@
 import random 
 from random import randint 
 from collections import Counter
+from statistics import mode
 
 
 
@@ -21,22 +22,24 @@ class store:
 
  
 
-def find_percentage(data):
-	pass 
-
-
-
-	
 def main():
 	store_1 = store(10,20)
 	custumer_work_array, car_array, custumer_dont_array, = [], [], [] 
-	objs = [custumer()for i in range(10)]
+	objs = [custumer()for i in range(1000)]
 	for obj in objs:
 		if obj.working == True and obj.workhours_close < obj.buy_time:custumer_work_array.append(obj.buy_time)
-		elif obj.working == False:custumer_dont_array.append(obj)
-		if obj.car == True:car_array.append(obj)
+		elif obj.working == False:custumer_dont_array.append(obj.buy_time)
+		if obj.car == True:car_array.append(obj.buy_time)
 
-	print(find_percentage(custumer_work_array))
+	work = mode(custumer_work_array)
+	car = mode(car_array)
+	dont_work = mode(custumer_dont_array)
+
+	
+	print("Most Perople that work like to go to the store",work)
+	print("Most Perople that have car like to go to the store",car)
+	print("Most Perople that dont_work like to go to the store",dont_work)
+
 
 
 
