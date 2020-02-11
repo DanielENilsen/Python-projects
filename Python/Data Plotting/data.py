@@ -1,7 +1,6 @@
 
 import random 
 from random import randint 
-from collections import Counter
 from statistics import mode
 
 
@@ -13,7 +12,8 @@ class custumer:
 		self.working = random.choice([True,False])
 		self.car = random.choice([True,False])
 		self.workhours_close = int(random.choice([14,15,16,17]))
-		self.buy_time =  int(random.choice([14,15,16,17,18,19,20]))
+		self.buy_time =  int(random.choice([10,11,12,13,14,15,16,17,18,19,20]))
+
 
 class store:
 	def __init__(self,storeOpen,storeClose):
@@ -35,10 +35,10 @@ def main():
 	car = mode(car_array)
 	dont_work = mode(custumer_dont_array)
 
-	
-	print("Most Perople that work like to go to the store",work)
-	print("Most Perople that have car like to go to the store",car)
-	print("Most Perople that dont_work like to go to the store",dont_work)
+
+	print("Most People that work like to go to the store",work)
+	print("Most People that have car like to go to the store",car)
+	print("Most People that don't work like to go to the store",dont_work)
 
 
 
